@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="#2C2C2C"
+    android:background="@drawable/rounded_corner"
+    android:layout_marginTop="16dp"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="12dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#383838"
+        android:src="@android:drawable/ic_dialog_alert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_bold"
+        android:text="TEST ITEM"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemImage"
+        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/itemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="54.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="#FFAA00"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@id/constraintChange"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/itemPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#00CB6A"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <ImageView
+                android:id="@+id/itemArrow"
+                android:maxHeight="4dp"
+                android:maxWidth="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:src="@android:drawable/ic_lock_idle_alarm"/>
+
+            <TextView
+                android:id="@+id/dailyChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_marginVertical="4dp"
+                android:text="5.4%"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/itemArrow"
+                app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
