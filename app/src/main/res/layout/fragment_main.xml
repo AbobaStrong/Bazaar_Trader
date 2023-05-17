@@ -91,30 +91,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#2C2C2C"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/rounded_corner">
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true">
+
                     <ImageView
-                        android:id="@+id/favoritesFirstImage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_margin="8dp"
+                        android:id="@+id/favoritesFirstItemImage"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="12dp"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/rounded_corner"
+                        android:backgroundTint="#383838"
                         android:src="@android:drawable/ic_dialog_alert"
-                        android:backgroundTint="#383838"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
+                        android:id="@+id/favoritesFirstItemName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TEST ITEM"
                         android:fontFamily="@font/mulish_bold"
+                        android:text="TEST ITEM"
                         android:textColor="#FFFFFF"
-                        app:layout_constraintStart_toEndOf="@+id/favoritesFirstImage"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginTop="8dp"
+                        android:textSize="20dp"
                         android:layout_marginStart="8dp"
-                        android:textSize="16dp"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/favoritesFirstItemImage"
+                        app:layout_constraintTop_toTopOf="parent" />
                     <TextView
-                        android:id="@+id/favoritesFirstPrice"
+                        android:id="@+id/favoritesFirstItemPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="54.5"
@@ -122,38 +129,46 @@
                         android:textColor="#FFAA00"
                         android:layout_marginEnd="8dp"
                         android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/favoritesFirstConstraintChange"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:textSize="16dp"/>
+                        android:textSize="20dp"/>
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/favoritesFirstConstraintChange"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        app:layout_constraintTop_toBottomOf="@+id/favoritesFirstPrice"
+                        app:layout_constraintTop_toBottomOf="@+id/favoritesFirstItemPrice"
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_margin="8dp"
                         android:background="@drawable/rounded_corner"
                         android:backgroundTint="#00CB6A"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <ImageView
-                            android:id="@+id/favoritesFirstArrow"
+                            android:id="@+id/favoritesFirstItemArrow"
+                            android:maxHeight="4dp"
+                            android:maxWidth="4dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_margin="8dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
                             android:src="@android:drawable/ic_lock_idle_alarm"/>
+
                         <TextView
+                            android:id="@+id/FavoritesFirstItemDailyChange"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_margin="8dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginVertical="4dp"
                             android:text="5.4%"
                             android:textColor="#FFFFFF"
-                            app:layout_constraintStart_toEndOf="@id/favoritesFirstArrow"
-                            />
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/favoritesFirstItemArrow"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -162,30 +177,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#2C2C2C"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/rounded_corner">
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true">
+
                     <ImageView
-                        android:id="@+id/favoritesSecondImage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_margin="8dp"
+                        android:id="@+id/favoritesSecondItemImage"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="12dp"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/rounded_corner"
+                        android:backgroundTint="#383838"
                         android:src="@android:drawable/ic_dialog_alert"
-                        android:backgroundTint="#383838"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
+                        android:id="@+id/favoritesSecondItemName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TEST ITEM"
                         android:fontFamily="@font/mulish_bold"
+                        android:text="TEST ITEM"
                         android:textColor="#FFFFFF"
-                        app:layout_constraintStart_toEndOf="@+id/favoritesSecondImage"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginTop="8dp"
+                        android:textSize="20dp"
                         android:layout_marginStart="8dp"
-                        android:textSize="16dp"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/favoritesSecondItemImage"
+                        app:layout_constraintTop_toTopOf="parent" />
                     <TextView
-                        android:id="@+id/favoritesSecondPrice"
+                        android:id="@+id/favoritesSecondItemPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="54.5"
@@ -193,38 +215,46 @@
                         android:textColor="#FFAA00"
                         android:layout_marginEnd="8dp"
                         android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/favoritesSecondConstraintChange"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:textSize="16dp"/>
+                        android:textSize="20dp"/>
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/favoritesSecondConstraintChange"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        app:layout_constraintTop_toBottomOf="@+id/favoritesSecondPrice"
+                        app:layout_constraintTop_toBottomOf="@+id/favoritesSecondItemPrice"
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_margin="8dp"
                         android:background="@drawable/rounded_corner"
                         android:backgroundTint="#00CB6A"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <ImageView
-                            android:id="@+id/favoritesSecondArrow"
+                            android:id="@+id/favoritesSecondItemArrow"
+                            android:maxHeight="4dp"
+                            android:maxWidth="4dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_margin="8dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
                             android:src="@android:drawable/ic_lock_idle_alarm"/>
+
                         <TextView
+                            android:id="@+id/FavoritesSecondItemDailyChange"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_margin="8dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginVertical="4dp"
                             android:text="5.4%"
                             android:textColor="#FFFFFF"
-                            app:layout_constraintStart_toEndOf="@id/favoritesSecondArrow"
-                            />
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/favoritesSecondItemArrow"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -233,30 +263,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#2C2C2C"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/rounded_corner">
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true">
+
                     <ImageView
-                        android:id="@+id/favoritesThirdImage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_margin="8dp"
+                        android:id="@+id/favoritesThirdItemImage"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="12dp"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/rounded_corner"
+                        android:backgroundTint="#383838"
                         android:src="@android:drawable/ic_dialog_alert"
-                        android:backgroundTint="#383838"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
+                        android:id="@+id/favoritesThirdItemName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TEST ITEM"
                         android:fontFamily="@font/mulish_bold"
+                        android:text="TEST ITEM"
                         android:textColor="#FFFFFF"
-                        app:layout_constraintStart_toEndOf="@+id/favoritesThirdImage"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginTop="8dp"
+                        android:textSize="20dp"
                         android:layout_marginStart="8dp"
-                        android:textSize="16dp"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/favoritesThirdItemImage"
+                        app:layout_constraintTop_toTopOf="parent" />
                     <TextView
-                        android:id="@+id/favoritesThirdPrice"
+                        android:id="@+id/favoritesThirdItemPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="54.5"
@@ -264,38 +301,46 @@
                         android:textColor="#FFAA00"
                         android:layout_marginEnd="8dp"
                         android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/favoritesThirdConstraintChange"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:textSize="16dp"/>
+                        android:textSize="20dp"/>
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/favoritesThirdConstraintChange"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        app:layout_constraintTop_toBottomOf="@+id/favoritesThirdPrice"
+                        app:layout_constraintTop_toBottomOf="@+id/favoritesThirdItemPrice"
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_margin="8dp"
                         android:background="@drawable/rounded_corner"
                         android:backgroundTint="#00CB6A"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <ImageView
-                            android:id="@+id/favoritesThirdArrow"
+                            android:id="@+id/favoritesThirdItemArrow"
+                            android:maxHeight="4dp"
+                            android:maxWidth="4dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_margin="8dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
                             android:src="@android:drawable/ic_lock_idle_alarm"/>
+
                         <TextView
+                            android:id="@+id/FavoritesThirdItemDailyChange"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_margin="8dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginVertical="4dp"
                             android:text="5.4%"
                             android:textColor="#FFFFFF"
-                            app:layout_constraintStart_toEndOf="@id/favoritesThirdArrow"
-                            />
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/favoritesThirdItemArrow"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -316,7 +361,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Favorites"
+                        android:text="Best Margin"
                         android:textColor="#FFFFFF"
                         android:fontFamily="sans-serif-medium"
                         android:textSize="24dp"
@@ -342,30 +387,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#2C2C2C"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/rounded_corner">
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true">
+
                     <ImageView
-                        android:id="@+id/marginFirstImage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_margin="8dp"
+                        android:id="@+id/marginFirstItemImage"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="12dp"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/rounded_corner"
+                        android:backgroundTint="#383838"
                         android:src="@android:drawable/ic_dialog_alert"
-                        android:backgroundTint="#383838"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
+                        android:id="@+id/marginFirstItemName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TEST ITEM"
                         android:fontFamily="@font/mulish_bold"
+                        android:text="TEST ITEM"
                         android:textColor="#FFFFFF"
-                        app:layout_constraintStart_toEndOf="@+id/marginFirstImage"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginTop="8dp"
+                        android:textSize="20dp"
                         android:layout_marginStart="8dp"
-                        android:textSize="16dp"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/marginFirstItemImage"
+                        app:layout_constraintTop_toTopOf="parent" />
                     <TextView
-                        android:id="@+id/marginFirstPrice"
+                        android:id="@+id/marginFirstItemPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="54.5"
@@ -373,70 +425,86 @@
                         android:textColor="#FFAA00"
                         android:layout_marginEnd="8dp"
                         android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/marginConstraintFirstChange"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:textSize="16dp"/>
+                        android:textSize="20dp"/>
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/marginConstraintFirstChange"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        app:layout_constraintTop_toBottomOf="@+id/marginFirstPrice"
+                        app:layout_constraintTop_toBottomOf="@+id/marginFirstItemPrice"
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_margin="8dp"
                         android:background="@drawable/rounded_corner"
                         android:backgroundTint="#00CB6A"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <ImageView
-                            android:id="@+id/marginFirstArrow"
+                            android:id="@+id/marginFirstItemArrow"
+                            android:maxHeight="4dp"
+                            android:maxWidth="4dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_margin="8dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
                             android:src="@android:drawable/ic_lock_idle_alarm"/>
+
                         <TextView
+                            android:id="@+id/marginFirstDailyChange"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_margin="8dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginVertical="4dp"
                             android:text="5.4%"
                             android:textColor="#FFFFFF"
-                            app:layout_constraintStart_toEndOf="@id/marginFirstArrow"
-                            />
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/marginFirstItemArrow"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#2C2C2C"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/rounded_corner">
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true">
+
                     <ImageView
-                        android:id="@+id/marginSecondImage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_margin="8dp"
+                        android:id="@+id/marginSecondItemImage"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="12dp"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/rounded_corner"
+                        android:backgroundTint="#383838"
                         android:src="@android:drawable/ic_dialog_alert"
-                        android:backgroundTint="#383838"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
+                        android:id="@+id/marginSecondItemName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TEST ITEM"
                         android:fontFamily="@font/mulish_bold"
+                        android:text="TEST ITEM"
                         android:textColor="#FFFFFF"
-                        app:layout_constraintStart_toEndOf="@+id/marginSecondImage"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginTop="8dp"
+                        android:textSize="20dp"
                         android:layout_marginStart="8dp"
-                        android:textSize="16dp"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/marginSecondItemImage"
+                        app:layout_constraintTop_toTopOf="parent" />
                     <TextView
-                        android:id="@+id/marginSecondPrice"
+                        android:id="@+id/marginSecondItemPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="54.5"
@@ -444,70 +512,86 @@
                         android:textColor="#FFAA00"
                         android:layout_marginEnd="8dp"
                         android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/marginConstraintSecondChange"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:textSize="16dp"/>
+                        android:textSize="20dp"/>
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/marginConstraintSecondChange"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        app:layout_constraintTop_toBottomOf="@+id/marginSecondPrice"
+                        app:layout_constraintTop_toBottomOf="@+id/marginSecondItemPrice"
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_margin="8dp"
                         android:background="@drawable/rounded_corner"
                         android:backgroundTint="#00CB6A"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <ImageView
-                            android:id="@+id/marginSecondArrow"
+                            android:id="@+id/marginSecondItemArrow"
+                            android:maxHeight="4dp"
+                            android:maxWidth="4dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_margin="8dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
                             android:src="@android:drawable/ic_lock_idle_alarm"/>
+
                         <TextView
+                            android:id="@+id/marginSecondDailyChange"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_margin="8dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginVertical="4dp"
                             android:text="5.4%"
                             android:textColor="#FFFFFF"
-                            app:layout_constraintStart_toEndOf="@id/marginSecondArrow"
-                            />
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/marginSecondItemArrow"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#2C2C2C"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/rounded_corner">
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true">
+
                     <ImageView
-                        android:id="@+id/marginThirdImage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_margin="8dp"
+                        android:id="@+id/marginThirdItemImage"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="12dp"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/rounded_corner"
+                        android:backgroundTint="#383838"
                         android:src="@android:drawable/ic_dialog_alert"
-                        android:backgroundTint="#383838"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
+                        android:id="@+id/marginThirdItemName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TEST ITEM"
                         android:fontFamily="@font/mulish_bold"
+                        android:text="TEST ITEM"
                         android:textColor="#FFFFFF"
-                        app:layout_constraintStart_toEndOf="@+id/marginThirdImage"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginTop="8dp"
+                        android:textSize="20dp"
                         android:layout_marginStart="8dp"
-                        android:textSize="16dp"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/marginThirdItemImage"
+                        app:layout_constraintTop_toTopOf="parent" />
                     <TextView
-                        android:id="@+id/marginThirdPrice"
+                        android:id="@+id/marginThirdItemPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="54.5"
@@ -515,52 +599,54 @@
                         android:textColor="#FFAA00"
                         android:layout_marginEnd="8dp"
                         android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/marginConstraintThirdChange"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:textSize="16dp"/>
+                        android:textSize="20dp"/>
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/marginConstraintThirdChange"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        app:layout_constraintTop_toBottomOf="@+id/marginThirdPrice"
+                        app:layout_constraintTop_toBottomOf="@+id/marginThirdItemPrice"
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_margin="8dp"
                         android:background="@drawable/rounded_corner"
                         android:backgroundTint="#00CB6A"
                         app:layout_constraintBottom_toBottomOf="parent">
                         <ImageView
-                            android:id="@+id/marginThirdArrow"
+                            android:id="@+id/marginThirdItemArrow"
+                            android:maxHeight="4dp"
+                            android:maxWidth="4dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_margin="8dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
                             android:src="@android:drawable/ic_lock_idle_alarm"/>
+
                         <TextView
+                            android:id="@+id/marginThirdDailyChange"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_margin="8dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginVertical="4dp"
                             android:text="5.4%"
                             android:textColor="#FFFFFF"
-                            app:layout_constraintStart_toEndOf="@id/marginThirdArrow"
-                            />
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/marginThirdItemArrow"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
 
-
-
-
         </LinearLayout>
-
-
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

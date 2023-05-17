@@ -1,8 +1,6 @@
 package com.example.bazaartrader;
 
-import android.media.Image;
-
-public class FavoritesListItem {
+public class ListItem {
     public String itemName;
     public Integer itemImage;
     public Integer itemPrice;
@@ -17,17 +15,17 @@ public class FavoritesListItem {
     public Integer buyVolume;
     public Integer sellVolume;
 
-    public FavoritesListItem(String itemName,
-                             Integer itemImage,
-                             Integer itemPrice,
-                             Integer itemArrow,
-                             Integer dailyChange,
-                             Integer sellPrice,
-                             Integer buyPrice,
-                             Integer buyOrders,
-                             Integer sellOrders,
-                             Integer buyVolume,
-                             Integer sellVolume) {
+    public ListItem(String itemName,
+                         Integer itemImage,
+                         Integer itemPrice,
+                         Integer itemArrow,
+                         Integer dailyChange,
+                         Integer sellPrice,
+                         Integer buyPrice,
+                         Integer buyOrders,
+                         Integer sellOrders,
+                         Integer buyVolume,
+                         Integer sellVolume) {
         this.itemName = itemName;
         this.itemImage = itemImage;
         this.itemPrice = itemPrice;
