@@ -2,11 +2,13 @@ package com.example.bazaartrader;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bazaartrader.databinding.FavoritesListItemBinding;
@@ -19,6 +21,12 @@ public class FavoritesRecyclerViewAdapter extends RecyclerView.Adapter<Favorites
 
     private List<SkyBlockBazaarReply.Product> data;
     private LayoutInflater localInflater;
+    private ItemClickListener itemClickListener;
+
+
+    public void setItemClickListener(ItemClickListener itemClickListener){
+        this.itemClickListener = itemClickListener;
+    }
 
     public FavoritesRecyclerViewAdapter(Context context, List<SkyBlockBazaarReply.Product> data) {
         this.data = data;
@@ -39,6 +47,15 @@ public class FavoritesRecyclerViewAdapter extends RecyclerView.Adapter<Favorites
         //holder.itemImage.setImageResource(item.itemImage); // should be drawable
         holder.itemPrice.setText(String.valueOf(item.getQuickStatus().getBuyPrice()));
 
+        holder.item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(itemClickListener != null){
+                    itemClickListener.onItemClick(position);
+                }
+            }
+        });
+
         //holder.itemArrow.setImageResource(item.itemArrow); // R.drawable.....
     }
 
@@ -49,6 +66,7 @@ public class FavoritesRecyclerViewAdapter extends RecyclerView.Adapter<Favorites
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
+        ConstraintLayout item;
         ImageView itemImage;
         TextView itemName;
         TextView itemPrice;
@@ -61,6 +79,7 @@ public class FavoritesRecyclerViewAdapter extends RecyclerView.Adapter<Favorites
             itemPrice = binding.itemPrice;
             itemArrow = binding.itemArrow;
             dailyChange = binding.dailyChange;
+            item = binding.item;
         }
 
     }

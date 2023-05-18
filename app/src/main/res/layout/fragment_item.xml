@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ItemFragment"
+    android:orientation="vertical"
+    android:background="#121212">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@android:drawable/ic_dialog_alert"
+            android:layout_margin="24dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test Text"
+            android:id="@+id/itemName"
+            app:layout_constraintStart_toEndOf="@+id/itemImage"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="24dp"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/mulish_bold"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/headerItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5.4"
+            android:textColor="#FFAA00"
+            android:textSize="24dp"
+            android:fontFamily="@font/mulish_bold"
+            app:layout_constraintTop_toBottomOf="@+id/itemImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"/>
+
+        <ImageView
+            android:id="@+id/favoritesStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_star_border_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="12dp"
+            android:clickable="true"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#2c2c2c"
+        android:layout_margin="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Overview"
+            android:layout_gravity="center"
+            android:fontFamily="@font/mulish_bold"
+            android:textSize="24dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/sellPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Sell price:"
+            android:fontFamily="@font/mulish_bold"
+            android:textSize="24dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/buyPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Buy price:"
+            android:fontFamily="@font/mulish_bold"
+            android:textSize="24dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Margin:"
+            android:fontFamily="@font/mulish_bold"
+            android:textSize="24dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/buyOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Buy orders:"
+            android:fontFamily="@font/mulish_bold"
+            android:textSize="24dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/sellOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Sell orders:"
+            android:fontFamily="@font/mulish_bold"
+            android:textSize="24dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/buyVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Buy volume:"
+            android:fontFamily="@font/mulish_bold"
+            android:textSize="24dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/sellVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Sell volume:"
+            android:fontFamily="@font/mulish_bold"
+            android:textSize="24dp"
+            android:layout_margin="8dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
