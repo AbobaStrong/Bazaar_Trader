@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.bazaartrader.MainFragment"
+        android:name="com.example.bazaartrader.Fragments.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.example.bazaartrader.FavoritesFragment"
+        android:name="com.example.bazaartrader.Fragments.FavoritesFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/marginFragment"
-        android:name="com.example.bazaartrader.MarginFragment"
+        android:name="com.example.bazaartrader.Fragments.MarginFragment"
         android:label="fragment_margin"
         tools:layout="@layout/fragment_margin" >
         <action
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/itemFragment"
-        android:name="com.example.bazaartrader.ItemFragment"
+        android:name="com.example.bazaartrader.Fragments.ItemFragment"
         android:label="fragment_item"
         tools:layout="@layout/fragment_item" />
 </navigation>

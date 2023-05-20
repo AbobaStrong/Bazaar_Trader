@@ -1,4 +1,4 @@
-package com.example.bazaartrader;
+package com.example.bazaartrader.RecyclerView.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,26 +11,29 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bazaartrader.Database.FavoriteProduct;
+import com.example.bazaartrader.RecyclerView.Format;
+import com.example.bazaartrader.RecyclerView.ItemClickListener;
 import com.example.bazaartrader.databinding.FavoritesListItemBinding;
-
-import net.hypixel.api.reply.skyblock.SkyBlockBazaarReply;
 
 import java.util.List;
 
 public class FavoritesRecyclerViewAdapter extends RecyclerView.Adapter<FavoritesRecyclerViewAdapter.ViewHolder> {
 
-    private List<SkyBlockBazaarReply.Product> data;
+    private List<FavoriteProduct> data;
     private LayoutInflater localInflater;
     private ItemClickListener itemClickListener;
 
-
-    public void setItemClickListener(ItemClickListener itemClickListener){
+    public void setItemClickListener(ItemClickListener itemClickListener) {
         this.itemClickListener = itemClickListener;
     }
 
-    public FavoritesRecyclerViewAdapter(Context context, List<SkyBlockBazaarReply.Product> data) {
-        this.data = data;
+    public FavoritesRecyclerViewAdapter(Context context) {
         this.localInflater = LayoutInflater.from(context);
+    }
+
+    public void setData(List<FavoriteProduct> data) {
+        this.data = data;
     }
 
     @NonNull
@@ -42,21 +45,19 @@ public class FavoritesRecyclerViewAdapter extends RecyclerView.Adapter<Favorites
 
     @Override
     public void onBindViewHolder(@NonNull FavoritesRecyclerViewAdapter.ViewHolder holder, int position) {
-        SkyBlockBazaarReply.Product item = data.get(position);
-        holder.itemName.setText(item.getProductId());
-        //holder.itemImage.setImageResource(item.itemImage); // should be drawable
-        holder.itemPrice.setText(String.valueOf(item.getQuickStatus().getBuyPrice()));
-
+        FavoriteProduct item = data.get(position);
+        holder.itemName.setText(Format.convertString(item.getProductName()));
+        holder.itemPrice.setText(Format.formatNumber(item.getBuyPrice()));
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(itemClickListener != null){
-                    itemClickListener.onItemClick(position);
+                int clickedPosition = holder.getAdapterPosition();
+                if (itemClickListener != null && clickedPosition != RecyclerView.NO_POSITION) {
+                    itemClickListener.onItemClick(clickedPosition);
                 }
             }
         });
 
-        //holder.itemArrow.setImageResource(item.itemArrow); // R.drawable.....
     }
 
     @Override
@@ -72,6 +73,7 @@ public class FavoritesRecyclerViewAdapter extends RecyclerView.Adapter<Favorites
         TextView itemPrice;
         ImageView itemArrow;
         TextView dailyChange;
+
         public ViewHolder(@NonNull FavoritesListItemBinding binding) {
             super(binding.getRoot());
             itemImage = binding.itemImage;

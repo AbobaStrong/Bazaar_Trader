@@ -1,4 +1,4 @@
-package com.example.bazaartrader;
+package com.example.bazaartrader.RecyclerView;
 
 import java.text.DecimalFormat;
 

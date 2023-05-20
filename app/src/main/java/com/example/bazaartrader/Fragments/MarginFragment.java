@@ -1,4 +1,4 @@
-package com.example.bazaartrader;
+package com.example.bazaartrader.Fragments;
 
 import android.os.Bundle;
 
@@ -6,12 +6,14 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.bazaartrader.databinding.FragmentFavoritesBinding;
+import com.example.bazaartrader.Database.FavoriteProduct;
+import com.example.bazaartrader.RecyclerView.ItemClickListener;
+import com.example.bazaartrader.RecyclerView.Adapters.MarginRecyclerViewAdapter;
+import com.example.bazaartrader.R;
 import com.example.bazaartrader.databinding.FragmentMarginBinding;
 
 import net.hypixel.api.reply.skyblock.SkyBlockBazaarReply;
@@ -53,12 +55,19 @@ public class MarginFragment extends Fragment implements ItemClickListener {
 
     @Override
     public void onItemClick(int position) {
-        SkyBlockBazaarReply.Product selectedProduct = bestMargin.get(position);
 
-        String selectedProductJson = JsonUtils.toJson(selectedProduct);
+        FavoriteProduct selectedProduct = new FavoriteProduct();
+        selectedProduct.setProductName(bestMargin.get(position).getProductId());
+        selectedProduct.setBuyPrice(bestMargin.get(position).getQuickStatus().getBuyPrice());
+        selectedProduct.setSellPrice(bestMargin.get(position).getQuickStatus().getSellPrice());
+        selectedProduct.setBuyOrders(bestMargin.get(position).getQuickStatus().getBuyOrders());
+        selectedProduct.setSellOrders(bestMargin.get(position).getQuickStatus().getSellOrders());
+        selectedProduct.setBuyVolume(bestMargin.get(position).getQuickStatus().getBuyVolume());
+        selectedProduct.setSellVolume(bestMargin.get(position).getQuickStatus().getSellVolume());
+        selectedProduct.setMargin(bestMargin.get(position).getQuickStatus().getBuyPrice() - bestMargin.get(position).getQuickStatus().getSellPrice());
 
         Bundle bundle = new Bundle();
-        bundle.putString("selectedProductJson", selectedProductJson);
+        bundle.putSerializable("selectedCustomProduct", (Serializable)selectedProduct);
 
         Navigation.findNavController(binding.getRoot()).navigate(R.id.action_marginFragment_to_itemFragment, bundle);
     }

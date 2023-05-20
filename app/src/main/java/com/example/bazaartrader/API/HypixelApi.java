@@ -1,4 +1,4 @@
-package com.example.bazaartrader;
+package com.example.bazaartrader.API;
 
 
 import net.hypixel.api.HypixelAPI;

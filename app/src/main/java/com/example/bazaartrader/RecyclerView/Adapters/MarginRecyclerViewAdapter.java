@@ -1,7 +1,7 @@
-package com.example.bazaartrader;
+package com.example.bazaartrader.RecyclerView.Adapters;
 
-import static com.example.bazaartrader.Format.convertString;
-import static com.example.bazaartrader.Format.formatNumber;
+import static com.example.bazaartrader.RecyclerView.Format.convertString;
+import static com.example.bazaartrader.RecyclerView.Format.formatNumber;
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.bazaartrader.RecyclerView.ItemClickListener;
 import com.example.bazaartrader.databinding.FavoritesListItemBinding;
 
 import net.hypixel.api.reply.skyblock.SkyBlockBazaarReply;
