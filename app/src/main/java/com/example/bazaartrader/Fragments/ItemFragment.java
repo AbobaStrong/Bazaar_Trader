@@ -46,6 +46,7 @@ public class ItemFragment extends Fragment {
 
             if (selectedProduct != null) {
 
+                binding.itemImage.setImageResource(Format.setImage(selectedProduct.getProductName()));
                 binding.headerItemPrice.setText(Format.formatNumber(selectedProduct.getSellPrice()));
                 binding.itemName.setText(Format.convertString(selectedProduct.getProductName()));
                 binding.sellPrice.setText("Sell price: " + Format.formatNumber(selectedProduct.getSellPrice()));

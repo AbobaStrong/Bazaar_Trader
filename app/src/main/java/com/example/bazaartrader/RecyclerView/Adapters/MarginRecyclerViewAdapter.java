@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.bazaartrader.RecyclerView.Format;
 import com.example.bazaartrader.RecyclerView.ItemClickListener;
 import com.example.bazaartrader.databinding.FavoritesListItemBinding;
 
@@ -48,6 +49,7 @@ public class MarginRecyclerViewAdapter extends RecyclerView.Adapter<MarginRecycl
         SkyBlockBazaarReply.Product item = data.get(position);
         holder.itemName.setText(convertString(item.getProductId()));
         holder.itemPrice.setText(formatNumber(item.getQuickStatus().getBuyPrice() - item.getQuickStatus().getSellPrice()));
+        holder.itemImage.setImageResource(Format.setImage(item.getProductId()));
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,15 +77,12 @@ public class MarginRecyclerViewAdapter extends RecyclerView.Adapter<MarginRecycl
         ImageView itemImage;
         TextView itemName;
         TextView itemPrice;
-        ImageView itemArrow;
-        TextView dailyChange;
+
         public ViewHolder(@NonNull FavoritesListItemBinding binding) {
             super(binding.getRoot());
             itemImage = binding.itemImage;
             itemName = binding.itemName;
             itemPrice = binding.itemPrice;
-            itemArrow = binding.itemArrow;
-            dailyChange = binding.dailyChange;
             item = binding.item;
         }
 

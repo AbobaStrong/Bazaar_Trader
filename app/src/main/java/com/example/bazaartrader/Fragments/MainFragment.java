@@ -2,6 +2,7 @@ package com.example.bazaartrader.Fragments;
 
 import static com.example.bazaartrader.RecyclerView.Format.convertString;
 import static com.example.bazaartrader.RecyclerView.Format.formatNumber;
+import static com.example.bazaartrader.RecyclerView.Format.setImage;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -51,12 +52,16 @@ public class MainFragment extends Fragment {
                     marginBundle.putSerializable("bestMargin", (Serializable) bestMargin);
                     binding.marginFirstItemName.setText(convertString(bestMargin.get(0).getProductId()));
                     binding.marginFirstItemPrice.setText(formatNumber(bestMargin.get(0).getQuickStatus().getBuyPrice() - bestMargin.get(0).getQuickStatus().getSellPrice()));
+                    binding.marginFirstItemImage.setImageResource(setImage(bestMargin.get(0).getProductId()));
+
 
                     binding.marginSecondItemName.setText(convertString(bestMargin.get(1).getProductId()));
                     binding.marginSecondItemPrice.setText(formatNumber(bestMargin.get(1).getQuickStatus().getBuyPrice() - bestMargin.get(1).getQuickStatus().getSellPrice()));
+                    binding.marginSecondItemImage.setImageResource(setImage(bestMargin.get(1).getProductId()));
 
                     binding.marginThirdItemName.setText(convertString(bestMargin.get(2).getProductId()));
                     binding.marginThirdItemPrice.setText(formatNumber(bestMargin.get(2).getQuickStatus().getBuyPrice() - bestMargin.get(2).getQuickStatus().getSellPrice()));
+                    binding.marginThirdItemImage.setImageResource(setImage(bestMargin.get(2).getProductId()));
                 }, e -> {
                     Log.e("MainFragment", "Ошибка получения данных", e);
                 });

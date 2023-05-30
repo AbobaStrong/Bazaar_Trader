@@ -1,5 +1,9 @@
 package com.example.bazaartrader.RecyclerView;
 
+import android.util.Log;
+
+import com.example.bazaartrader.R;
+
 import java.text.DecimalFormat;
 
 public class Format {
@@ -61,4 +65,24 @@ public class Format {
         // Возвращаем результат в виде строки
         return result.toString();
     }
+
+    public static int setImage(String name){
+        Log.i("info",name);
+        if(name.contains("ENCHANTMENT")){
+            return R.drawable.enchantment;
+        }
+        else if(name.equals("MAGMA_FISH_DIAMOND")){
+            return R.drawable.diamond_magmafish;
+        }
+        else if(name.equals("FIFTH_MASTER_STAR")){
+            return R.drawable.fifth_master_star;
+        }
+        else if(name.equals("WOOD_SINGULARITY")){
+            return R.drawable.wod_singularity;
+        }
+        else{
+            return R.drawable.barrier;
+        }
+    }
+
 }

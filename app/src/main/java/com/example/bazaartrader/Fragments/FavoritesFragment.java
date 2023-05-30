@@ -39,11 +39,11 @@ public class FavoritesFragment extends Fragment implements ItemClickListener {
 
         // Load favorites from the database
         loadFavoritesFromDatabase();
-        binding.favoritesNumItems.setText(String.valueOf(favoritesData.size()) + " items");
+
         binding.favoritesRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         adapter = new FavoritesRecyclerViewAdapter(getActivity());
         binding.favoritesRecyclerView.setAdapter(adapter);
-
+        binding.favoritesNumItems.setText("2 items");
         // Set item click listener on the adapter
         adapter.setItemClickListener(this);
 
@@ -59,8 +59,8 @@ public class FavoritesFragment extends Fragment implements ItemClickListener {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(favoritesData -> {
-                    adapter.setData(favoritesData);
                     this.favoritesData = favoritesData;
+                    adapter.setData(favoritesData);
                 });
 
 

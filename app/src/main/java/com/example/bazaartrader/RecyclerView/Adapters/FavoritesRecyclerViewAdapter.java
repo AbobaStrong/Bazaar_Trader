@@ -48,6 +48,7 @@ public class FavoritesRecyclerViewAdapter extends RecyclerView.Adapter<Favorites
         FavoriteProduct item = data.get(position);
         holder.itemName.setText(Format.convertString(item.getProductName()));
         holder.itemPrice.setText(Format.formatNumber(item.getBuyPrice()));
+        holder.itemImage.setImageResource(Format.setImage(item.getProductName()));
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,16 +72,13 @@ public class FavoritesRecyclerViewAdapter extends RecyclerView.Adapter<Favorites
         ImageView itemImage;
         TextView itemName;
         TextView itemPrice;
-        ImageView itemArrow;
-        TextView dailyChange;
+
 
         public ViewHolder(@NonNull FavoritesListItemBinding binding) {
             super(binding.getRoot());
             itemImage = binding.itemImage;
             itemName = binding.itemName;
             itemPrice = binding.itemPrice;
-            itemArrow = binding.itemArrow;
-            dailyChange = binding.dailyChange;
             item = binding.item;
         }
 
